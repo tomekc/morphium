@@ -137,46 +137,6 @@
 
     </dependencies>
 
-
-    <profiles>
-        <profile>
-            <id>annotations</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-jar-plugin</artifactId>
-                        <configuration>
-                            <classifier>annotations</classifier>
-                            <includes>
-                                <include>**/de/caluga/morphium/annotations/*</include>
-                                <include>**/de/caluga/morphium/*NameProvider*</include>
-                            </includes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-        <profile>
-            <id>core</id>
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-jar-plugin</artifactId>
-                        <configuration>
-                            <classifier>core</classifier>
-                            <excludes>
-                                <exclude>**/de/caluga/morphium/annotations/*</exclude>
-                                <include>**/de/caluga/morphium/*NameProvider*</include>
-                            </excludes>
-                        </configuration>
-                    </plugin>
-                </plugins>
-            </build>
-
-        </profile>
-
-    </profiles>
-
     <distributionManagement>
         <!--        <repository>
            <id>release</id>
